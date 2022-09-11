@@ -28,17 +28,11 @@ const ingresar= document.getElementById('btnIngresar');
     const email = document.querySelector("#email").value;
     const mensaje = document.querySelector("#mensaje").value;
 
-   /*if (usuario == "" || email == "" || mensaje=="") {
-        alert("Indique usuario, email y mensaje");
-        return;
-    }*/
     //---------------VALIDAR USUARIO Y EMAIL--------------------------
     const user= /^[a-zA-ZÀ-ÿ\s]{1,40}$/; // Letras y espacios, pueden llevar acentos.
     const userValido= user.test(usuario);
     const expReg= /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const correovalido= expReg.test(email);
-    
-    
     
     //----------------LOCALSTORAGE--------------------------------------------//
     localStorage.setItem("usuario", usuario);
